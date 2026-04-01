@@ -118,6 +118,8 @@
   --size-icon-large: 32px;
   --size-touch-square: 48px;
 
+  --layout-page-max-width: 1200px;
+
   --box-shadow-00: 0 0 0 0 #000000;
   --box-shadow-01: 0 1px 4px 0 #00204d26;
   --box-shadow-02: 0 3px 8px 0 #00034d26;
@@ -269,6 +271,8 @@
   --radius-05: var(--border-radius-05);
   --radius-06: var(--border-radius-06);
 
+  --max-width-page: var(--layout-page-max-width);
+
   --text-ds-01: var(--font-size-01);
   --text-ds-02: var(--font-size-02);
   --text-ds-03: var(--font-size-03);
@@ -317,7 +321,7 @@
   }
 
   #root {
-    @apply mx-auto box-border flex min-h-svh w-full max-w-[1126px] flex-col border-x border-border text-center;
+    @apply mx-auto box-border flex min-h-svh w-full max-w-page flex-col text-center;
   }
 
   p {
