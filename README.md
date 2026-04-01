@@ -20,7 +20,7 @@ You get a normal Git repository with its own history.
 Scaffolds the latest commit on the repository **default branch** (unless you pin a branch, tag, or commit — see below).
 
 ```bash
-npx tiged YOUR_ORG/moonpig-prototype-template my-prototype
+npx tiged pijnenburger/moonpig-prototype-template my-prototype
 cd my-prototype
 npm install
 npm run dev
@@ -32,14 +32,14 @@ npm run dev
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin git@github.com:YOUR_ORG/my-prototype.git
+git remote add origin git@github.com:YOUR_USER_OR_ORG/my-prototype.git
 git push -u origin main
 ```
 
 ### Pin a version
 
 ```bash
-npx tiged YOUR_ORG/moonpig-prototype-template#v1.0.0 my-prototype
+npx tiged pijnenburger/moonpig-prototype-template#v1.0.0 my-prototype
 ```
 
 ### Private repositories
@@ -47,7 +47,7 @@ npx tiged YOUR_ORG/moonpig-prototype-template#v1.0.0 my-prototype
 Public repos work with the default tarball mode. For private templates, use Git over SSH:
 
 ```bash
-npx tiged --mode=git git@github.com:YOUR_ORG/moonpig-prototype-template my-prototype
+npx tiged --mode=git git@github.com:pijnenburger/moonpig-prototype-template my-prototype
 ```
 
 ## After scaffolding
@@ -69,10 +69,6 @@ npx tiged --mode=git git@github.com:YOUR_ORG/moonpig-prototype-template my-proto
 | `npm run lint` | ESLint                   |
 | `npm run preview` | Preview production build locally |
 
-## Maintainer: publish as a GitHub template
+## Maintainer notes
 
-1. Push this repository to GitHub (default branch e.g. `main`).
-2. **Settings → General → Template repository** — enable **Template repository**.
-3. Optional: add topics such as `vite`, `react`, `typescript`, `tailwindcss`, `template`.
-
-Replace `YOUR_ORG/moonpig-prototype-template` in the snippets above with your real `owner/repo` slug.
+This repository is published as [pijnenburger/moonpig-prototype-template](https://github.com/pijnenburger/moonpig-prototype-template) with **Template repository** enabled and topics set. If you **transfer or fork** the repo under another `owner/repo`, update the tiged and `git remote` examples in this README to match.
