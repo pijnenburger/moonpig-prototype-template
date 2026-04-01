@@ -52,6 +52,8 @@ npx tiged --mode=git git@github.com:pijnenburger/moonpig-prototype-template my-p
 
 ## After scaffolding
 
+- **AI-assisted development**: If you use Cursor, Codex, Claude, or similar tools, read [AGENTS.md](AGENTS.md) for project-specific coding conventions (Tailwind tokens, components, images).
+
 - **Package name**: This template uses the npm package name `my-moonpig-prototype`. Rename if you like:
 
   ```bash

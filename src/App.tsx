@@ -7,7 +7,7 @@ function App() {
   return (
     <section
       id="center"
-      className="flex grow flex-col items-center justify-center gap-[25px] max-lg:gap-[18px] max-lg:px-5 max-lg:pb-6 max-lg:pt-8"
+      className="flex grow flex-col items-center justify-center gap-6 max-lg:gap-5 max-lg:px-5 max-lg:pb-6 max-lg:pt-8"
     >
       <div className="relative aspect-square w-full max-w-[170px]">
         <img
