@@ -7,11 +7,17 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "launchpad:docs": "node scripts/generate-launchpad-index.mjs"
   },
   "dependencies": {
+    "@moonpig/launchpad-components": "^86.2.0",
+    "@moonpig/launchpad-localisation": "^86.2.0",
+    "@moonpig/launchpad-theme": "^86.2.0",
+    "@moonpig/launchpad-utils": "^86.2.0",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",

@@ -1,0 +1,16 @@
+---
+description: Prefer Launchpad design-system components in React UI
+globs: src/**/*.tsx
+alwaysApply: false
+---
+
+# Launchpad components
+
+Before building custom buttons, text, modals, tabs, or alerts, check Launchpad.
+
+- Import from `@moonpig/launchpad-components` (or `@moonpig/launchpad-forms` for form fields).
+- Use Tailwind on wrapper elements for layout and spacing — not on Launchpad internals.
+- Do **not** add `GlobalStyle` — the app uses `LaunchpadShell` and `src/index.css` instead.
+- Look up props in Storybook (https://docs.launchpad.moonpig.io) or `node_modules/@moonpig/launchpad-components/dist/types/index.d.ts`.
+
+Full guide: [docs/LAUNCHPAD.md](../../docs/LAUNCHPAD.md)

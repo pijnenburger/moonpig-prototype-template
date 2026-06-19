@@ -1,5 +1,14 @@
 import { useState } from "react";
-import moonpigAppLogo from "./assets/moonpig-app.svg";
+import {
+  PrimaryButton,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from "@moonpig/launchpad-components";
+import greetzLogo from "./assets/GreetzLogo.svg";
+import moonpigLogo from "./assets/moonpig-app.svg";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,26 +18,41 @@ function App() {
       id="center"
       className="flex grow flex-col items-center justify-center gap-6 max-lg:gap-5 max-lg:px-5 max-lg:pb-6 max-lg:pt-8"
     >
-      <div className="relative aspect-square w-full max-w-[170px]">
-        <img
-          src={moonpigAppLogo}
-          className="h-full w-full object-contain"
-          alt="Moonpig app"
-        />
-      </div>
+      <Tabs defaultValue="moonpig" className="w-full max-w-md">
+        <TabList ariaLabel="Brand">
+          <Tab value="moonpig">Moonpig</Tab>
+          <Tab value="greetz">Greetz</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel value="moonpig">
+            <div className="relative mx-auto aspect-square w-full max-w-[170px] pt-6">
+              <img
+                src={moonpigLogo}
+                className="h-full w-full object-contain"
+                alt="Moonpig"
+              />
+            </div>
+          </TabPanel>
+          <TabPanel value="greetz">
+            <div className="relative mx-auto aspect-square w-full max-w-[170px] pt-6">
+              <img
+                src={greetzLogo}
+                className="h-full w-full object-contain"
+                alt="Greetz"
+              />
+            </div>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
       <div>
         <h1>Get started</h1>
         <p>
           Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
         </p>
       </div>
-      <button
-        type="button"
-        className="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-brand-interaction px-3 py-2 font-sans text-base font-bold text-inverted transition-colors duration-300 hover:bg-brand-interaction-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-focus-ring"
-        onClick={() => setCount((count) => count + 1)}
-      >
+      <PrimaryButton onClick={() => setCount((count) => count + 1)}>
         Count is {count}
-      </button>
+      </PrimaryButton>
     </section>
   );
 }
